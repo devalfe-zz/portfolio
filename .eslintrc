@@ -4,10 +4,15 @@
     "es6": true,
     "node": true
   },
-  "extends": ["prettier", "prettier/@typescript-eslint"],
+  "extends": [
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "tsconfig.*?.json",
+    "project": "tsconfig.json",
     "sourceType": "module"
   },
   "plugins": [
