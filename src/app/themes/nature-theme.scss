@@ -1,0 +1,9 @@
+$ngx-nature-primary: mat-palette($mat-brown, 700, 300, 900);
+$ngx-nature-accent: mat-palette($mat-deep-purple, 300);
+$ngx-nature-warn: mat-palette($mat-red, 600);
+
+$ngx-nature-theme: mat-light-theme(
+  $ngx-nature-primary,
+  $ngx-nature-accent,
+  $ngx-nature-warn
+);
