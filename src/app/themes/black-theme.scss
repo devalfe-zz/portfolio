@@ -1,0 +1,9 @@
+$ngx-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$ngx-black-accent: mat-palette($mat-blue-grey, 400);
+$ngx-black-warn: mat-palette($mat-red, 500);
+
+$ngx-black-theme: mat-dark-theme(
+  $ngx-black-primary,
+  $ngx-black-accent,
+  $ngx-black-warn
+);
