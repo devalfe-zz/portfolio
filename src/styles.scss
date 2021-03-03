@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/themes/styles/styles-variables';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/bootstrap';
+
+@import './app/themes/styles/styles-reset';
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import './app/themes/black-theme';
+@import './app/themes/default-theme';
+@import './app/themes/light-theme';
+@import './app/themes/nature-theme';
+
+@import './app/themes/styles/styles-reset.scss-theme';
+
+@mixin custom-components-theme($theme) {
+  @include ngx-styles-reset-theme($theme);
+}
+
+.default-theme {
+  @include angular-material-theme($ngx-theme);
+  @include custom-components-theme($ngx-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($ngx-light-theme);
+  @include custom-components-theme($ngx-light-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($ngx-black-theme);
+  @include custom-components-theme($ngx-black-theme);
+}
+
+.nature-theme {
+  @include angular-material-theme($ngx-nature-theme);
+  @include custom-components-theme($ngx-nature-theme);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #021c3c;
+  }
+  color: #6b6b6b;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  &:hover,
+  &focus {
+    color: #ffbb38;
+    text-decoration: none;
+  }
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
