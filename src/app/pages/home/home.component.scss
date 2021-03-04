@@ -1,0 +1,42 @@
+.social_icons {
+  a {
+    color: rgba(#fff, 0.8);
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    &:hover {
+      color: #ffbb38;
+      text-decoration: none;
+    }
+  }
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ffbb38;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}

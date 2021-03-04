@@ -12,11 +12,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/pages.module').then((m) => m.PagesModule)
   },
-  {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
 ];
 
 const config: ExtraOptions = {

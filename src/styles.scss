@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/themes/styles/styles-variables';
+// @import './app/themes/styles/styles-variables';
 
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
@@ -9,42 +9,42 @@
 @import '~bootstrap/scss/forms';
 @import '~bootstrap/scss/bootstrap';
 
-@import './app/themes/styles/styles-reset';
+// @import './app/themes/styles/styles-reset';
 
-@import '~@angular/material/theming';
+// @import '~@angular/material/theming';
 
-@include mat-core();
+// @include mat-core();
 
-@import './app/themes/black-theme';
-@import './app/themes/default-theme';
-@import './app/themes/light-theme';
-@import './app/themes/nature-theme';
+// @import './app/themes/black-theme';
+// @import './app/themes/default-theme';
+// @import './app/themes/light-theme';
+// @import './app/themes/nature-theme';
 
-@import './app/themes/styles/styles-reset.scss-theme';
+// @import './app/themes/styles/styles-reset.scss-theme';
 
-@mixin custom-components-theme($theme) {
-  @include ngx-styles-reset-theme($theme);
-}
+// @mixin custom-components-theme($theme) {
+//   @include ngx-styles-reset-theme($theme);
+// }
 
-.default-theme {
-  @include angular-material-theme($ngx-theme);
-  @include custom-components-theme($ngx-theme);
-}
+// .default-theme {
+//   @include angular-material-theme($ngx-theme);
+//   @include custom-components-theme($ngx-theme);
+// }
 
-.light-theme {
-  @include angular-material-theme($ngx-light-theme);
-  @include custom-components-theme($ngx-light-theme);
-}
+// .light-theme {
+//   @include angular-material-theme($ngx-light-theme);
+//   @include custom-components-theme($ngx-light-theme);
+// }
 
-.black-theme {
-  @include angular-material-theme($ngx-black-theme);
-  @include custom-components-theme($ngx-black-theme);
-}
+// .black-theme {
+//   @include angular-material-theme($ngx-black-theme);
+//   @include custom-components-theme($ngx-black-theme);
+// }
 
-.nature-theme {
-  @include angular-material-theme($ngx-nature-theme);
-  @include custom-components-theme($ngx-nature-theme);
-}
+// .nature-theme {
+//   @include angular-material-theme($ngx-nature-theme);
+//   @include custom-components-theme($ngx-nature-theme);
+// }
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -77,4 +77,94 @@ a {
 
 .container-fluid {
   max-width: 1200px;
+}
+
+.tm-bg-black-transparent {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/*
+  home section
+*/
+
+#tmWelcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tm-brand-container-outer {
+  margin-top: -400px;
+}
+
+.tm-brand-container-inner {
+  max-width: 580px;
+  width: 100%;
+}
+
+.tm-brand-container {
+  padding: 75px 110px;
+}
+
+.tm-brand-name {
+  font-size: 3rem;
+}
+
+.tm-brand-description {
+  font-size: 1.4rem;
+}
+
+.parallax-window {
+  min-height: 1100px;
+  background: transparent;
+}
+
+#tmContact {
+  min-height: 1197px;
+}
+
+.tm-welcome-container {
+  min-height: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-self: stretch;
+}
+
+.tm-bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.tm-welcome-title {
+  margin-bottom: 40px;
+  color: #021c3c;
+}
+
+.tm-welcome-left {
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tm-welcome-left-col {
+  display: flex;
+  align-items: center;
+}
+
+.tm-welcome-right {
+  color: white;
+  background-color: #021c3c;
+  padding: 80px 43px 70px;
+  height: 100%;
+}
+
+.tm-welcome-icon {
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
 }

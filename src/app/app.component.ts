@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   envName = env.envName;
   version = env.versions.appVersion;
   year = new Date().getFullYear();
-  logo = require('../assets/logo.png').default;
+  logo = require('./../assets/logo.png').default;
   title = env.appName;
 
   ngOnInit(): void {}
