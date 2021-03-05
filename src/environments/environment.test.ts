@@ -1,7 +1,7 @@
-const packageJson = require('../../../../package.json');
+const packageJson = require('../../package.json');
 
 export const environment = {
-  appName: 'Portfolio',
+  appName: 'portfolio',
   envName: 'TEST',
   production: false,
   test: true,
