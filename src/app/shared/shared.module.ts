@@ -20,10 +20,11 @@ import {
   faUikit,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [],
-  imports: [CommonModule, FontAwesomeModule],
-  exports: [FontAwesomeModule]
+  imports: [CommonModule, FontAwesomeModule, CarouselModule],
+  exports: [FontAwesomeModule, CarouselModule]
 })
 export class SharedModule {
   constructor(faIconLibrary: FaIconLibrary) {
