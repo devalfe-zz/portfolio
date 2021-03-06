@@ -5,11 +5,57 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { ServiciosComponent } from './home/servicios/servicios.component';
-import { SharedModule } from '../shared/shared.module';
+import {
+  FaIconLibrary,
+  FontAwesomeModule
+} from '@fortawesome/angular-fontawesome';
+import {
+  faBars,
+  faCog,
+  faPlayCircle,
+  faPowerOff,
+  faRocket,
+  faUserCircle
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faInstagram,
+  faMediumM,
+  faTwitter,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons';
+import { PortafolioComponent } from './home/portafolio/portafolio.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
-  declarations: [PagesComponent, HomeComponent, ServiciosComponent],
-  imports: [CommonModule, PagesRoutingModule, SharedModule],
-  exports: [PagesComponent, HomeComponent, ServiciosComponent]
+  declarations: [
+    PagesComponent,
+    HomeComponent,
+    ServiciosComponent,
+    PortafolioComponent
+  ],
+  imports: [
+    CommonModule,
+    PagesRoutingModule,
+    FontAwesomeModule,
+    CarouselModule
+  ],
+  exports: [FontAwesomeModule, CarouselModule]
 })
-export class PagesModule {}
+export class PagesModule {
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIcons(
+      faCog,
+      faBars,
+      faRocket,
+      faPowerOff,
+      faUserCircle,
+      faPlayCircle,
+      faGithub,
+      faMediumM,
+      faTwitter,
+      faInstagram,
+      faYoutube
+    );
+  }
+}
