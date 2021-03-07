@@ -26,13 +26,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { PortafolioComponent } from './home/portafolio/portafolio.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ContactComponent } from './home/contact/contact.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     HomeComponent,
     ServiciosComponent,
-    PortafolioComponent
+    PortafolioComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
