@@ -138,6 +138,12 @@
         "markers": ["/"]
       }
     ],
-    "indent": "off"
+    "indent": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }

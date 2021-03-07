@@ -15,7 +15,7 @@ else
   git init
 
   git config user.name "Travis CI"
-  git config user.email "xilef_v7@outlook.com"
+  git config user.email "mdt.webmaster@gmail.com"
 
 
   git add .
