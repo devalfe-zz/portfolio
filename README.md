@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![Build Status](https://travis-ci.com/devalfe/portfolio.svg?token=Ch4ph177EbbhudXc4ix5&branch=main)
 [![codecov](https://codecov.io/gh/devalfe/portfolio/branch/main/graph/badge.svg?token=INJQXNLF8C)](https://codecov.io/gh/devalfe/portfolio)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 ## Development server
 

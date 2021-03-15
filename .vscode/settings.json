@@ -1,11 +1,13 @@
 {
   "cSpell.words": [
+    "Figma",
     "Laravel",
     "Uikit",
     "Youtube",
     "codecov",
     "codelyzer",
     "commitlint",
+    "delix",
     "devkit",
     "dirxml",
     "eqeqeq",
@@ -13,6 +15,7 @@
     "fortawesome",
     "jasminewd",
     "ngsw",
+    "primeng",
     "stylelint",
     "travisci"
   ]
