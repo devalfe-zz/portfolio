@@ -24,4 +24,6 @@ else
   git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
   echo Deploy to GitHub Pages - Success
 fi
+
 echo Deploy to GitHub Pages - Finish
+
