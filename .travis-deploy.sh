@@ -35,4 +35,3 @@ else
 fi
 
 echo Deploy to GitHub Pages - Finish
-#
