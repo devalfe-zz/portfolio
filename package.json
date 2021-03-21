@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "start:prod": "npm run build:prod && npm run server",
+    "start:prod": "npm run build:prod",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "npm run lint && ng test --configuration=test",
@@ -17,9 +17,7 @@
     "format:write": "prettier src/**/*.{ts,tsx,js,jsx,json,md,css,scss,html} --write",
     "format:test": "prettier src/**/*.{ts,json,md,scss} --list-different",
     "release": "standard-version && git push --follow-tags origin master",
-    "build:travisci": "ng build --target production --aot --vendor-chunk --extract-css --output-hashing all --stats-json --deploy-url /portfolio/ --base-href /portfolio",
     "clean": "rm -rf ./dist/",
-    "server": "cd dist && http-server",
     "prod": "npm run clean && npm run build:prod && npm run server"
   },
   "husky": {
