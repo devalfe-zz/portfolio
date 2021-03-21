@@ -1,45 +1,121 @@
 {
-  "name": "ngx-delix",
-  "version": "0.0.0",
+  "name": "portfolio",
+  "version": "1.0.1",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
+    "start:prod": "npm run build:prod",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build:prod": "ng build --prod",
+    "test": "npm run lint && ng test --configuration=test",
+    "e2e": "ng e2e",
+    "watch": "ng test --configuration=test --browsers ChromeHeadless --watch --reporters dots",
+    "lint": "eslint --color -c .eslintrc --ext .ts .",
+    "lint:styles": "stylelint ./src/**/*.scss",
+    "ci": "npm run format:test && npm run lint && ng test --configuration=test --browsers ChromeTravisCi --code-coverage && npm run build:prod -- --deploy-url /portfolio/ --base-href /portfolio",
+    "format:write": "prettier src/**/*.{ts,tsx,js,jsx,json,md,css,scss,html} --write",
+    "format:test": "prettier src/**/*.{ts,json,md,scss} --list-different",
+    "release": "standard-version && git push --follow-tags origin master",
+    "clean": "rm -rf ./dist/",
+    "prod": "npm run clean && npm run build:prod && npm run server"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{md,html,css,scss,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.3",
+    "@angular/cdk": "^11.2.2",
     "@angular/common": "~11.2.3",
     "@angular/compiler": "~11.2.3",
     "@angular/core": "~11.2.3",
     "@angular/forms": "~11.2.3",
+    "@angular/material": "^11.2.2",
     "@angular/platform-browser": "~11.2.3",
     "@angular/platform-browser-dynamic": "~11.2.3",
     "@angular/router": "~11.2.3",
+    "@angular/service-worker": "~11.2.3",
+    "@fortawesome/angular-fontawesome": "^0.8.0",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.5.3",
+    "browser-detect": "^0.2.28",
+    "jquery": "^3.5.1",
+    "ngx-owl-carousel-o": "^5.0.0",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "uuid": "^8.3.1",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.2",
-    "@angular/cli": "~11.2.2",
+    "@angular-devkit/build-angular": "~0.1102.3",
+    "@angular-eslint/eslint-plugin": "^0.6.0-beta.0",
+    "@angular/cli": "~11.2.3",
     "@angular/compiler-cli": "~11.2.3",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.31",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.7.0",
+    "@typescript-eslint/parser": "^4.14.0",
     "codelyzer": "^6.0.0",
+    "cypress": "^6.6.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^4.3.8",
     "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
+    "jasmine-spec-reporter": "~6.0.0",
     "karma": "~6.1.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-spec-reporter": "0.0.32",
+    "lint-staged": "^10.5.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0",
     "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^20.0.0",
+    "ts-node": "~9.1.1",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "typescript": "~4.1.2",
+    "webpack-bundle-analyzer": "^4.1.0"
   }
 }
