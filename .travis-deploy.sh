@@ -33,5 +33,4 @@ else
   echo Deploy to GitHub Pages - Success
 
 fi
-
 echo Deploy to GitHub Pages - Finish
