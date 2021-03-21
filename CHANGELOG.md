@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/devalfe/portfolio/compare/v1.1.0...v1.1.1) (2021-03-21)
+
+### Bug Fixes
+
+-   deploy ([59be250](https://github.com/devalfe/portfolio/commit/59be25011658552d40d5a6617224b3feeb2aa398))
+
 ## 1.1.0 (2021-03-21)
 
 ### Features
