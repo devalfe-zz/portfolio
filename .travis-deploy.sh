@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
 echo Deploy to GitHub Pages
-
 # only deploy tags
 if [ -z "$TRAVIS_TAG" ]; then
 
@@ -13,7 +11,7 @@ else
 
   # go to the directory which contains build artifacts and create a *new* Git repo
   # directory may be different based on your particular build process
-  cd dist/angular-ngrx-material-starter
+  cd dist/portfolio
   git init
 
   # inside this git repo we'll pretend to be a new user
