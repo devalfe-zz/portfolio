@@ -9,10 +9,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class PortafolioComponent implements OnInit {
   customOptions: any = {
     loop: true,
-    margin: 10,
+    margin: 8,
     autoplay: true,
+    lazyLoad: true,
     responsiveClass: true,
-    navText: ['Previous', 'Next'],
+
     responsive: {
       0: {
         items: 1
@@ -23,8 +24,7 @@ export class PortafolioComponent implements OnInit {
       940: {
         items: 3
       }
-    },
-    nav: true
+    }
   };
   constructor() {}
 
