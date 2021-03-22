@@ -91,12 +91,6 @@ a {
   home section
 */
 
-#tmWelcome {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 .tm-brand-container-outer {
   margin-top: -400px;
 }
@@ -123,9 +117,9 @@ a {
   background: transparent;
 }
 
-#tmContact {
-  min-height: 1197px;
-}
+// #tmContact {
+//   min-height: 1197px;
+// }
 
 .tm-welcome-container {
   min-height: 400px;

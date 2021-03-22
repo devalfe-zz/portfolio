@@ -39,7 +39,7 @@ section {
 }
 
 .box {
-  padding: 2px 0px;
+  padding: 2 0;
   padding-right: 3px !important;
   padding-left: 3px !important;
 }
@@ -48,16 +48,16 @@ a .box-part {
   /*background:#FFF;*/
   background: #1093c8;
   border-radius: 0;
-  padding: 5px 5px;
-  margin: 3 0px;
+  padding: 5px;
+  margin: 3 0;
 }
 
 .box-part {
   /*background:#FFF;*/
   background: #999;
   border-radius: 0;
-  padding: 5px 5px;
-  margin: 3 0px;
+  padding: 5px;
+  margin: 3 0;
   height: 160px;
 }
 
@@ -80,12 +80,12 @@ a .box-part {
 }
 
 .text {
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
 .title {
   color: white;
-  line-height: 1pt;
+  line-height: 1;
   font-weight: bold;
   font-weight: 900;
 }
