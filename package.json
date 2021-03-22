@@ -13,7 +13,7 @@
     "watch": "ng test --configuration=test --browsers ChromeHeadless --watch --reporters dots",
     "lint": "eslint --color -c .eslintrc --ext .ts .",
     "lint:styles": "stylelint ./src/**/*.scss",
-    "ci": "npm run format:test && npm run lint && ng test --configuration=test --browsers ChromeTravisCi --code-coverage && npm run build:prod -- --deploy-url /portfolio/ --base-href /portfolio",
+    "ci": "npm run format:test && npm run lint && ng test --configuration=test --browsers ChromeTravisCi --code-coverage && npm run build:prod -- --deploy-url /portfolio/ --base-href /portfolio/",
     "format:write": "prettier src/**/*.{ts,tsx,js,jsx,json,md,css,scss,html} --write",
     "format:test": "prettier src/**/*.{ts,json,md,scss} --list-different",
     "release": "standard-version && git push --follow-tags origin release",
